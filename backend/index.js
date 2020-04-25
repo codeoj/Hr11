@@ -3,7 +3,11 @@ const express = require('express'); //importa as funcionalidades do express
 const app = express();
 
 //
-app.post('/users', (request, response) => {
+app.get('/users', (request, response) => {
+    const params = request.query;
+
+    console.log(params)
+
     return response.json({
         chave: 'valor',
         nome: 'Ciata',
