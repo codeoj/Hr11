@@ -2,11 +2,13 @@ const express = require('express'); //importa as funcionalidades do express
 
 const app = express();
 
-//
-app.get('/users/:id', (request, response) => {
-    const params = request.params;
+app.use(express.json());
 
-    console.log(params)
+//
+app.post('/users', (request, response) => {
+    const params = request.body;
+
+    console.log(params);
 
     return response.json({
         chave: 'valor',
