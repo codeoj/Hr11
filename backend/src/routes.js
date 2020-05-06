@@ -1,11 +1,8 @@
-const express = require('express'); //importa as funcionalidades do express
+const express = require('express');
 
-const app = express();
+const routes = express.Router();
 
-app.use(express.json());
-
-//
-app.post('/users', (request, response) => {
+routes.post('/users', (request, response) => {
     const params = request.body;
 
     console.log(params);
@@ -18,5 +15,4 @@ app.post('/users', (request, response) => {
     });
 });
 
-app.listen(3333)
-
+module.exports = routes;
