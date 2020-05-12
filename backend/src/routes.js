@@ -2,17 +2,12 @@ const express = require('express');
 
 const routes = express.Router();
 
-routes.post('/users', (request, response) => {
-    const params = request.body;
+routes.post('/ongs', (request, response) => {
+    const data = request.body;    
 
-    console.log(params);
+    console.log(data);
 
-    return response.json({
-        chave: 'valor',
-        nome: 'Ciata',
-        idade: '23',
-        classe: 'S5'
-    });
+    return response.json();
 });
 
 module.exports = routes;
